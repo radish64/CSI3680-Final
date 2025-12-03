@@ -59,7 +59,8 @@ print(ares)
 asoup = BeautifulSoup(ares.content, 'html.parser')
 #bsoup = BeautifulSoup(bres.content, 'html.parser')
 
-products = asoup.find_all('div', {'class': 's-main-slot s-result-list s-search-results sg-row'})
+#products = asoup.find_all('div', {'class': 's-main-slot s-result-list s-search-results sg-row'})
+products = asoup.find_all('div', {'role': 'listitem'})
 product_names = []
 prices = []
 for product in products:
@@ -70,7 +71,6 @@ for product in products:
     if name and price:
         product_names.append(name.text)
         prices.append(price.text)
-        print(product_names, prices)
         # Save to CSV
         data = {'Product Name': product_names, 'Price': prices}
         df = pd.DataFrame(data)
