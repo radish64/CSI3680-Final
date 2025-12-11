@@ -20,6 +20,6 @@ To run, install the dependencies with `pip install -r requirements.txt`, then ru
 ### Team Members and Contributions
 - River - Web Scraping, CSV export
 - Zain - Excel, Visualizations
-- Heffrey - Presentation
+- Jeffrey - Presentation
 
 
