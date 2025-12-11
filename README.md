@@ -8,7 +8,14 @@ To run, install the dependencies with `pip install -r requirements.txt`, then ru
 - The `Search` class represents a web search, containing the urls and a method using the functions describe below to scrape the web for prices.
 - `amazon_scrape(url)` and `bestbuy_scrape(url)`
     - both of these scrape the search results for their respective websites. They contain request headers taken from firefox so the web requests sent via the `requests` module are allowed, and uses `beautifulsoup` to parse the web pages and get the product names and prices
-- 
+- clean_price_column(df)
+    - Removes symbols like commas and dollar signs from the Price column.
+    - Converts the cleaned price values into numeric format so calculations and graphs work correctly.
+    - Ensures that invalid or missing prices do not break your program.
+- export_to_excel(amazon_df, bestbuy_df, combined_df)
+    - Creates a single Excel workbook named prices_output.xlsx.
+    - Saves each dataset (Amazon, BestBuy, Combined) into a separate sheet.
+    - Makes the data organized and easy to review for the final project.
 
 ### Team Members and Contributions
 - River - Web Scraping, CSV export
