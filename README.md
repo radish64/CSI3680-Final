@@ -16,6 +16,9 @@ To run, install the dependencies with `pip install -r requirements.txt`, then ru
     - Creates a single Excel workbook named prices_output.xlsx.
     - Saves each dataset (Amazon, BestBuy, Combined) into a separate sheet.
     - Makes the data organized and easy to review for the final project.
+-  main execution block
+    - Instantiates a Search object with the chosen Amazon and BestBuy URLs and triggers the full scraping process
+    - Passes the scraped CSV data into your visualization functions (load, clean, export to Excel, and generate charts), completing the pipeline from raw data to processed data to visual output
 
 ### Team Members and Contributions
 - River - Web Scraping, CSV export
